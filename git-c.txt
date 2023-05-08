@@ -1,0 +1,37 @@
+git config --global user.name sudhi
+git config --global user.email sudarshana@gmail.com
+git init #initialize empty repository
+git status
+git status -s                 #status in brief
+git add filename              #adding file to staging area
+git commit -m "message"
+git commit -a -m "message"   #commiting without staging
+git add -A                   #adding all files to staging area
+git log
+git log -p -(number)     #to see previous commits
+git diff                 #compares working tree with staging area
+git diff --staged        #compares staging area with last commit
+git checkout filename    #recover the changes made
+git checkout -f          #recovering back changes made for all
+git rm filename                 #delete files
+git rm --cached filename         #removes from staging area
+touch .gitignore            #creates empty file named .gitignore in which all files to be ignored during push and pull operations are listed
+           <---- inside .gitignore ------>
+[   foldername/    #ignores that folder
+    mylogs.log     #ignores this file
+    /mylogs.log    #ignores the file present in same folder as that of .gitignore
+]
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+git branch name
+git checkout branchname        #switching to other branch
+git checkout -b branchname      #creates new branch and switches to it
+git merge branchname           #merging other branch with this
+index.lock     #its present inside .git when one git process is running and prevents simultaneous changes in that local git repo
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+git remote add origin https://github.com/.
+git remote -v     #gives url
+git push -u origin master
+git push
+git remote set-url origin git@github.com:SudarshanaMG/SudarshanaMG.git
